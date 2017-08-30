@@ -1,4 +1,4 @@
-I did some analysis on data from the Autumn Internationals (AIs) down the years. Initially I started out wanting to test my ability to build a web scraper, but I found [Pick and Go](http://www.lassen.co.nz/pickandgo.php) had done a lot of the heavy lifing for me. You can search for matches by date, team, competition. It outputs a nice tabular form that I simply copied to a text file and fed into a Jupyter notebook so I could mess around with the data in Python. 
+I put together some analysis on data from the Autumn Internationals (AIs) down the years. Initially I started out wanting to test my ability to build a web scraper, but I found [Pick and Go](http://www.lassen.co.nz/pickandgo.php) had done a lot of the heavy lifing for me. You can search for matches by date, team, competition. It outputs a nice tabular form that I simply copied to a text file and fed into a Jupyter notebook so I could mess around with the data in Python. 
 
 The initial data had the: 
 * *date* the match occured.
@@ -23,27 +23,25 @@ Firstly I had a look at the number of games a year. We have a general upward tre
 
 INSERT PIE CHART
 
-The chart above shows that the home team wins the majority of the time, but it's close. Also, draws are very rare having only  occured 9 times since the inception of AIs.
+The chart above shows that the home team wins the majority of the time, but it's close. Also, draws are very rare having only  occured 9 times since the inception of AIs. 
+
+Overall the team that scores the most tries wins 75.3 % of the time, and the team scoring fewer tries only winnng 6.7 % of the time. The rest are the  draws (2.3 %) and games where the teams had equal numbers of tries (15.7%) 
 
 **Margin of Victory**
 
 INSERT MARGIN CHART
 
-This shows a fairly skewed distribution with the median winning margin of 14 points. Interestingly if only home wins are taken into account this median increases to 16 points, while only away wins has a median of 11 points. Indicating that when the away team wins the game is generally closer (see the notebook for this plot) 
+This shows a fairly skewed distribution with a median winning margin of 14 points. Interestingly if only home wins are taken into account this median increases to 16 points, while only away wins has a median of 11 points. Indicating that the games are closer  when the away team wins (this plot is in the notebook for those interested).
 
 As you can see the highest margin of victory is when England beat Romania by 134-0 in 2001...ouch. Similarly 2004 Japan shipped heavy losses to both Wales and Scotland, 98-0 and 100-8 respectively. 
-
-**Does Scoring More Tries Win games**
-
-Yes, mostly. The team that scores the most tries wins 75.3 % of the time, and the team scoring fewer tries only winnng 6.7 % of the time. The rest are draws (2.3 %) and games where the teams had equal numbers of tries (15.7%) 
 
 **Teams Winning Percentage**
 
 INSERT WIN_PERC CHART
 
-Unsurprisingly New Zealand top the list with a win percentage of 84.21%, leading from South Africa (63.93%) before we have a very tight grouping of three teams; England (61.76%), Ireland (61.40%) and Australia (61.25%). I quite like that Ireland are fourth, but feel compelled to point out that Australia have actually played almost 1.5 times as many games as Ireland in AIs. In fact Australia have played the most AIs with 80 and actually have the second highest number of wins with 49. 
+Unsurprisingly New Zealand top the list with a win percentage of 84.21%; only 3 teams have managed to beat New Zealand in the Autumn, France and England (4 times each) and Ireland (their 1 and only win against them in 2016). There have been 3 draws involving the All Blacks, against France and England and once against Scotland way back in 1983. New Zealand lead the pack from South Africa (63.93%) before we have a very tight grouping of three teams; England (61.76%), Ireland (61.40%) and Australia (61.25%). I quite like that Ireland are fourth, but feel compelled to point out that Australia have actually played almost 1.5 times as many games as Ireland in AIs. In fact Australia have played the most AIs with 80 and actually have the second highest number of wins with 49. 
 
-Another anomaly to point out is the fact that Portugal (50.00%) sit above both Scotland (43.86%), and Wales (42.46%) by the virtue of having played 2 won 1. So below is the same dated orded by number of games won instead of winning percentage. This time our top three are New Zealand, Australia, and France. 
+Another anomaly to point out is the fact that Portugal (50.00%) sit above both Scotland (43.86%), and Wales (42.46%) by the virtue of having played only 2 games and won 1. So below is the same data orded by number of games won instead of winning percentage. This time our top three are New Zealand, Australia, and France. 
 
 INSERT WIN_GAMES CHART 
 
@@ -53,11 +51,11 @@ We have some interesting matchups this year, I chose to highlight a few of the t
 
 *Ireland vs South Africa* 
 
-This should be a doozy, SA on the up and have just leapfrogged Ireland in the rankings, and the stats say this is the most even of the AIs between the tier 1 teams. Tied on 4 wins a piece and the majority have finished at or within the overall AI median of 14 points, the only exception being Ireland's 32-15 victory in 2006.
+This should be a doozy, SA on the up and have just leapfrogged Ireland in the rankings, and the stats say this is the most even of the AIs that I had a deeper look into. The teams are tied on 4 wins a piece and the majority have finished at or within the overall AI median of 14 points, the only exception being Ireland's 32-15 victory in 2006.
 
 *Ireland vs Argentina*
 
-Stats tell of a dominant Ireland here, having won all 7 games played between the teams in AIs, with an average winning margin of appoximately 12 points. If only this was through of WC games... Additionally the teams havent met in AIs since 2012, so perhaps the tables will turn with the Rugby Championship experience Argentina have racked up. 
+Stats tell of a dominant Ireland here, having won all 7 games played between the teams in AIs, with an average winning margin of appoximately 12 points. If only this was true of WC games... Additionally the teams havent met in AIs since 2012, so perhaps the tables will turn with the Rugby Championship experience Argentina have racked up. 
 
 *England vs Argentina* 
 
@@ -67,7 +65,28 @@ England lead the head to head 6-1. The only blot on the record is an 18-25 loss 
 
 A rich history to look at here with 17 AIs played; England winning 10, Australia 6 and there has been one draw. England are also on a bit of a roll having won the last 3 AIs...and that isn't even mentioning the summer tour last year. Surely the Aussies will be out for revenge? 
 
+*Wales vs Australia*
 
+Australia clearly in command here having won 11 of the 15 meatings, Wales triumphing 3 times, with one draw. The Welsh wins tended to be tighter affairs having won by 3, 2, and 5 points compared to Australias's average margin of 11. 
 
+*Wales vs South Africa*
 
-The full Jupyter notebook, for those interested can be found add link 
+South Africa have a commanding lead of 10-2 in the head to head, averaging a winning margin of 10 points. However, the last two wins have been to Wales, can they keep this going? 
+
+*Wales vs New Zealand*
+
+New Zealand who have a streak to rival the Undertaker's at 13-0. The average winning margin is 20 points. However, New Zealand steamroll most teams and their overall average margin against all comers is 22 points. 
+
+*Scotland vs New Zealand*
+
+New Zealand are also undefeated against Scotland in the AIs with an average winning margin 26 points. However, as mentioned above, there has been 1 draw between the sides; 25-25 in 1983.
+
+*Scotland vs Australia*
+
+Scotland won the first meeting back in 1981, but have only won once since; a narrow 1 point win in 2009 giving Australia a 10-2 lead in the head to head. The last few games have been closely fought, after Scotland's victory in 2009, Australia took a 6 point win in 2013 and also had a 1 point win last year. With Scotland's win down under in the summer I'm sure the Scots will be hopeful to get their 3rd victory in this head to head. 
+
+Overall I hope that was interesting, my next steps would be to:
+* Do some nicer visualisations, something like and infographic. I have downloaded [tableau](https://www.tableau.com/) to mess around with but I am still figuring it out. 
+* Do similar analysis for other competitions, and probably actually get around to build that webscraper for it. 
+
+The full Jupyter notebook, for those interested can be found [here](http://nbviewer.jupyter.org/github/gpmurphy7/Rugby_analysis/blob/master/Autumn_International_Analysis/Autum_Internationals_First_Look.ipynb). 
